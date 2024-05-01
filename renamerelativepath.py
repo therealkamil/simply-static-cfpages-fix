@@ -34,7 +34,7 @@ try:
                             # Text processing based on file type
                             if filename.endswith('.html'):
                                 # Using regular expression to specifically update <link href=/ rel=canonical>
-                                new_data = re.sub(r'<link href=/ rel=canonical>', '<link href="example.com" rel=canonical>', data)
+                                new_data = re.sub(r'<link href=/ rel=canonical>', '<link href="example.com/" rel=canonical>', data)
                             elif filename.endswith('.xml'):
                                 new_data = re.sub(r'<loc>(.*?)</loc>', r'<loc>https://example.com\1</loc>', data)
                             else:
